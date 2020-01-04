@@ -1,0 +1,22 @@
+{% extends 'shop/basic.html' %}
+{% block title %} {{product.product_name}} My Awesome Cart {% endblock %}
+{% block body %}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <img src="/media/{{product.image}}" alt="" height="300" width="300">
+            </div>
+            <div class="row my-2">
+                <button class="btn btn-primary mx-2">BUY NOW</button>
+                <button class="btn btn-success">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h5>{{product.product_name}}</h5>
+            <h3><b>Rs.{{product.price}}</b></h3>
+            <p>{{product.desc}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
