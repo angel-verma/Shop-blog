@@ -26,8 +26,19 @@
 
         <!-- model start -->
         <!-- model ends -->
-        
+
     </form>
 </div>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+    {% if thank %}
+    alert('Your message has been send!')
+    document.location = "/shop/contact";
+    {% endif %}
+</script>
 
 {% endblock %}

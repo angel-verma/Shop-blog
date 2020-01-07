@@ -36,6 +36,7 @@ def about(request):
 
 
 def contact(request):
+    thank = False
     if request.method == "POST":
         # print(request)
         name = request.POST.get('name', '')
@@ -45,8 +46,9 @@ def contact(request):
         # print(name, email, phone, msg)
         contact = Contact(name=name, email=email, phone=phone, msg=msg)
         contact.save()
+        thank = True
 
-    return render(request, 'shop/contact.html')
+    return render(request, 'shop/contact.html', {'thank':thank})
 
 
 def tracker(request):
@@ -61,7 +63,7 @@ def tracker(request):
                 updates = []
                 for item in update:
                     updates.append({'text': item.update_desc, 'time': item.timestamp})
-                    response = json.dumps(updates, default=str)
+                    response = json.dumps(updates,order[0].itemsJson, default=str)
                 return HttpResponse(response)
             else:
                 return HttpResponse('{}')
