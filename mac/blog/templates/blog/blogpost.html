@@ -16,25 +16,22 @@
         </aside>
     </div>
     <div class="blog-post col-8">
-        <h2 class="blog-post-title">Sample blog post</h2>
+        <h2 class="blog-post-title">{{post.title}}</h2>
         <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+        <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
 
         <hr>
 
-        <blockquote>
-            <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu
-                leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-        </blockquote>
+        <h2>{{post.head0}}</h2>
+        <p>{{post.content_head0}}</p>
 
-        <h2>Heading1</h2>
-        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus,
-            nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros.</p>
+        <h2>{{post.head1}}</h2>
+        <p>{{post.content_head1}}</p>
 
-        <h2>Heading2</h2>
-        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus,
-            nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac,
-            vestibulum at eros.</p>
+        <h2>{{post.head2}}</h2>
+        <p>{{post.content_head2}}</p>
+
+        <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-numposts="5"></div>
     </div>
 
 
